@@ -1,57 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Monasteries - Sikkim Monastic Voyages</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Monasteries</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="text-white antialiased relative min-h-screen">
 
-  <!-- Header -->
-  <header class="bg-blue-900 text-white p-4 flex justify-between items-center">
-    <h1 class="text-2xl font-bold">Sikkim Monastic Voyages</h1>
-    <nav>
-      <a href="index.html" class="px-3 hover:underline">Home</a>
-      <a href="monasteries.html" class="px-3 underline">Monasteries</a>
-    </nav>
-  </header>
+<div class="fixed inset-0 bg-black/60 z-0"></div>
+<div class="fixed inset-0 bg-cover bg-center z-[-1]" style="background-image: url('https://i.postimg.cc/cHSBnpBt/Gemini-Generated-Image-5i5it25i5it25i5i-2.png');"></div>
 
-  <!-- Page Title -->
-  <section class="text-center py-10">
-    <h2 class="text-4xl font-bold text-blue-900">Explore Sikkim’s Monasteries</h2>
-    <p class="text-gray-600 mt-2">Discover history, culture, and spirituality</p>
-  </section>
+<div class="relative z-10 flex flex-col items-center px-6 py-10 space-y-10">
+    <h1 class="font-cinzel text-5xl md:text-6xl lg:text-7xl font-bold tracking-wider text-center">
+        Explore Monasteries
+    </h1>
 
-  <!-- Monastery Cards -->
-  <main class="max-w-5xl mx-auto grid gap-6 sm:grid-cols-2 p-6">
-    
-    <!-- Rumtek Monastery -->
-    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition">
-      <img src="assets/rumtek.jpg" alt="Rumtek Monastery" class="w-full h-48 object-cover">
-      <div class="p-4">
-        <h3 class="text-2xl font-semibold text-blue-800">Rumtek Monastery</h3>
-        <p class="text-gray-600 mt-2">The largest monastery in Sikkim, known for its rich Tibetan Buddhist heritage.</p>
-        <a href="monastery-rumtek.html" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Explore</a>
-      </div>
+    <p class="text-gray-300 text-center text-lg md:text-xl">Click on a monastery to explore its details</p>
+
+    <div class="flex flex-col space-y-6 mt-6">
+        <a href="rumtek.html" class="glass-btn px-10 py-4 text-lg font-bold text-center">Rumtek Monastery</a>
+        <a href="enchey.html" class="glass-btn px-10 py-4 text-lg font-bold text-center">Enchey Monastery</a>
     </div>
 
-    <!-- Enchey Monastery -->
-    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition">
-      <img src="assets/enchey.jpg" alt="Enchey Monastery" class="w-full h-48 object-cover">
-      <div class="p-4">
-        <h3 class="text-2xl font-semibold text-blue-800">Enchey Monastery</h3>
-        <p class="text-gray-600 mt-2">A 200-year-old monastery in Gangtok, famous for its scenic location and rituals.</p>
-        <a href="monastery-enchey.html" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Explore</a>
-      </div>
-    </div>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-blue-900 text-white text-center p-4 mt-10">
-    <p>&copy; 2025 Sikkim Monastic Voyages</p>
-  </footer>
-
+    <a href="index.html" class="mt-10 text-blue-400 underline">Back to Home</a>
+</div>
 </body>
 </html>
