@@ -6,12 +6,10 @@ function searchMonastery() {
     } else if(input === 'enchey') {
         window.location.href = 'enchey.html';
     } else {
-        // If nothing or unknown text, open explore page
-        window.location.href = 'explore.html';
+        window.location.href = 'monasteries.html';
     }
 }
 
-// Optional: Make Explore button redirect to explore page
 document.getElementById('exploreBtn').addEventListener('click', () => {
-    window.location.href = 'explore.html';
+    window.location.href = 'monasteries.html';
 });
