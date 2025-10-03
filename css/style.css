@@ -71,3 +71,48 @@ body {
 .logo-crest {
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
+
+/* Monastery page background & theme */
+.monastery-page {
+    background-color: #0d0d0d; /* Darkish background */
+    color: #e0e0e0; /* Slightly light text for contrast */
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Blue highlights for headings, buttons, links */
+.monastery-page h1, 
+.monastery-page h2 {
+    color: #3b82f6; /* Tailwind blue-500 */
+}
+
+.monastery-page .glass-btn {
+    border: 1px solid rgba(59, 130, 246, 0.5); /* Blue border glow */
+}
+
+.monastery-page .glass-btn:hover {
+    background: rgba(59, 130, 246, 0.2); /* Hover blue tint */
+}
+
+/* Feature buttons (VR, Connect, Gallery) */
+.monastery-page .feature-circle {
+    background: rgba(15, 23, 42, 0.5); /* Darker glass for contrast */
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    color: #3b82f6;
+}
+.feature-circle:hover {
+    background: rgba(59, 130, 246, 0.2);
+    color: white;
+}
+
+/* Scrollable overlay */
+.monastery-page::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5); /* Keep black tint across scrolling */
+    z-index: -1;
+}
