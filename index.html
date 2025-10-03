@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sikkim Monastic Voyages</title>
 
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="text-white antialiased relative">
+
+    <!-- Background + Overlay -->
+    <div class="fixed inset-0 bg-black/60 z-0"></div>
+    <div class="fixed inset-0 bg-cover bg-center z-[-1]" style="background-image: url('https://i.postimg.cc/cHSBnpBt/Gemini-Generated-Image-5i5it25i5it25i5i-2.png');"></div>
+
+    <!-- Main Content -->
+    <div class="relative z-10 min-h-screen flex flex-col items-center px-6 py-10 space-y-10">
+
+        <!-- Header: Logo -->
+        <header class="w-full flex justify-start mb-4">
+            <div class="bg-white/10 logo-crest h-16 w-16 flex items-center justify-center">
+                <span class="font-cinzel font-bold text-2xl">SMV</span>
+            </div>
+        </header>
+
+        <!-- Title -->
+        <div class="flex flex-col items-center space-y-3">
+            <h1 class="font-cinzel text-5xl md:text-6xl lg:text-7xl font-bold tracking-wider text-center">
+                SIKKIM MONASTIC VOYAGES
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-300 text-center tracking-wide">
+                A Journey of Serenity & Discovery
+            </p>
+        </div>
+
+        <!-- Explore Monasteries Button -->
+        <button id="exploreBtn" class="glass-btn px-10 py-3 text-lg font-bold">
+            Explore Monasteries
+        </button>
+
+        <!-- Search Bar -->
+        <div class="w-full max-w-xl">
+            <div class="glass-panel rounded-full flex items-center p-3 shadow-2xl">
+                <div class="pl-3 pr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+                <input id="searchInput" type="text" placeholder="Search Monasteries..." class="w-full bg-transparent border-none focus:ring-0 text-white placeholder-gray-300 text-lg">
+                <button onclick="searchMonastery()" class="bg-blue-500 hover:bg-blue-600 rounded-full px-6 py-3 text-lg font-bold transition-colors duration-300">GO</button>
+            </div>
+        </div>
+
+        <!-- Top Feature Buttons -->
+        <div class="glass-panel rounded-full p-4 shadow-2xl flex flex-wrap justify-center gap-4">
+            <button class="feature-btn">MULTILINGUAL SUPPORT</button>
+            <button class="feature-btn">PRAYER WALL</button>
+            <button class="feature-btn">MAPS & ROUTES</button>
+            <button class="feature-btn">CULTURAL CALENDAR</button>
+        </div>
+
+        <!-- Bottom Feature Buttons -->
+        <div class="flex flex-wrap justify-center gap-10 mt-6 mb-10">
+            <div class="feature-circle">VR 360° VIEW</div>
+            <div class="feature-circle">CONNECT</div>
+            <div class="feature-circle">GALLERY</div>
+        </div>
+
+    </div>
+
+    <!-- External JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
