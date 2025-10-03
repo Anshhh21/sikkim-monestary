@@ -1,25 +1,65 @@
-/* Fonts */
 body {
     font-family: 'Inter', sans-serif;
-    background-image: url('https://i.postimg.cc/cHSBnpBt/Gemini-Generated-Image-5i5it25i5it25i5i-2.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Keeps the background stationary on scroll */
 }
 
 .font-cinzel {
     font-family: 'Cinzel', serif;
 }
 
-/* Glassmorphism effect */
+.logo-crest {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/* Glass panels */
 .glass-panel {
     background: rgba(255, 255, 255, 0.1);
-    -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* Logo crest */
-.logo-crest {
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+/* Glass button */
+.glass-btn {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
+    transition: all 0.3s;
+}
+.glass-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Feature buttons */
+.feature-btn {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 0.5rem 1.2rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.feature-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Circle bottom buttons */
+.feature-circle {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.15);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.feature-circle:hover {
+    background: rgba(255,255,255,0.2);
 }
