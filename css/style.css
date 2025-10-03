@@ -1,27 +1,25 @@
-/* in css/style.css */
-
-/* body background etc. */
+/* Fonts */
 body {
-  font-family: 'Inter', sans-serif;
-  background-image: url('../assets/your-bg-image.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    background-image: url('https://i.postimg.cc/cHSBnpBt/Gemini-Generated-Image-5i5it25i5it25i5i-2.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the background stationary on scroll */
 }
 
 .font-cinzel {
-  font-family: 'Cinzel', serif;
+    font-family: 'Cinzel', serif;
 }
 
-/* glass-panel etc. */
+/* Glassmorphism effect */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.1);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* logo-crest etc. */
+/* Logo crest */
 .logo-crest {
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
