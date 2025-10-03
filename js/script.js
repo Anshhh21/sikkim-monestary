@@ -1,10 +1,17 @@
 function searchMonastery() {
-    const input = document.getElementById('searchInput').value.toLowerCase();
-    if(input.includes('rumtek')) {
+    const input = document.getElementById('searchInput').value.trim().toLowerCase();
+
+    if(input === 'rumtek') {
         window.location.href = 'rumtek.html';
-    } else if(input.includes('enchey')) {
+    } else if(input === 'enchey') {
         window.location.href = 'enchey.html';
     } else {
-        alert('Monastery not found! Try "Rumtek" or "Enchey".');
+        // If nothing or unknown text, open explore page
+        window.location.href = 'explore.html';
     }
 }
+
+// Optional: Make Explore button redirect to explore page
+document.getElementById('exploreBtn').addEventListener('click', () => {
+    window.location.href = 'explore.html';
+});
