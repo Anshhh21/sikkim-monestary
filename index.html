@@ -60,14 +60,18 @@
         <main class="flex flex-col items-center justify-center w-full max-w-4xl text-center space-y-8 md:space-y-10 flex-grow">
 
             <!-- Title & Subtitle -->
-            <div class="flex flex-col items-center">
-                <h1 class="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold tracking-wider leading-tight">
-                    SIKKIM MONASTIC VOYAGES
-                </h1>
-                <p class="mt-2 text-lg md:text-2xl text-gray-300 tracking-wide">
-                    A Journey of Serenity & Discovery
-                </p>
-            </div>
+           <div class="flex flex-col items-center">
+    <h1 class="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold tracking-wider leading-tight">
+        SIKKIM MONASTIC VOYAGES
+    </h1>
+    <p class="mt-2 text-lg md:text-2xl text-gray-300 tracking-wide">
+        A Journey of Serenity & Discovery
+    </p>
+    <!-- Explore Button -->
+    <a href="monasteries.html" class="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold shadow-lg transition">
+        Explore Monasteries
+    </a>
+</div>
             
             <!-- Top Feature Buttons -->
             <div class="glass-panel rounded-full p-2 md:p-3 shadow-2xl">
@@ -97,10 +101,27 @@
                     <div class="pl-3 pr-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                     </div>
-                    <input type="text" placeholder="Search Monasteries..." class="w-full bg-transparent border-none focus:ring-0 text-white placeholder-gray-300 text-lg">
-<a href="monasteries.html">
-  <button class="bg-blue-500 hover:bg-blue-600 rounded-full px-6 py-3 text-lg font-bold transition-colors duration-300">GO</button>
-</a>
+                    <input id="searchInput" type="text" placeholder="Search Monasteries..." 
+  class="w-full bg-transparent border-none focus:ring-0 text-white placeholder-gray-300 text-lg">
+
+<button onclick="searchMonastery()" 
+  class="bg-blue-500 hover:bg-blue-600 rounded-full px-6 py-3 text-lg font-bold transition-colors duration-300">
+  GO
+</button>
+
+<script>
+function searchMonastery() {
+  let query = document.getElementById("searchInput").value.toLowerCase().trim();
+  
+  if (query.includes("rumtek")) {
+    window.location.href = "monastery-rumtek.html";
+  } else if (query.includes("enchey")) {
+    window.location.href = "monastery-enchey.html";
+  } else {
+    window.location.href = "monasteries.html"; // fallback
+  }
+}
+</script>
                 </div>
             </div>
 
