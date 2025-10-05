@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Enchey Monastery</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
   <style>
     body {
       background-image: url('https://github.com/Anshhh21/sikkim-monestary/blob/main/images/enchey.jpg?raw=true');
@@ -14,7 +14,6 @@
       color: white;
       font-family: 'Inter', sans-serif;
     }
-
     .feature-circle {
       background: rgba(15, 23, 42, 0.5);
       border: 1px solid rgba(59, 130, 246, 0.4);
@@ -22,12 +21,10 @@
       border-radius: 1rem;
       min-width: 140px;
     }
-
     .feature-circle:hover {
       background: rgba(59, 130, 246, 0.2);
       color: white;
     }
-
     .glass-panel {
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(12px);
@@ -35,23 +32,21 @@
       padding: 2rem;
       border-radius: 1rem;
     }
-
     .overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.55);
+      background: rgba(0, 0, 0, 0.55);
       z-index: -1;
     }
-
     .highlight {
       color: #fff;
-      text-shadow: 0 0 15px rgba(255,255,255,0.9);
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
     }
   </style>
 </head>
 <body class="relative">
   <div class="overlay"></div>
-  
+
   <div class="min-h-screen flex flex-col items-center justify-center px-6 py-12 space-y-8">
     <h1 class="text-5xl md:text-6xl font-bold highlight text-center font-cinzel">
       ENCHEY MONASTERY
@@ -59,27 +54,20 @@
 
     <div class="glass-panel max-w-4xl text-lg leading-relaxed space-y-6">
       <p>
-        Enchey Monastery, meaning “the solitary temple,” stands gracefully on a hilltop just three kilometers from Gangtok. This 200-year-old monastery holds immense religious significance for followers of the Nyingma order of Vajrayana Buddhism. Legend says that Lama Druptob Karpo, a famous tantric master known for his ability to fly, built this monastery after flying from Maenam Hill in South Sikkim to this very spot.
+        Enchey Monastery, meaning “the solitary temple,” stands gracefully on a hilltop just three kilometers from Gangtok.
+        This 200-year-old monastery holds immense religious significance for followers of the Nyingma order of Vajrayana Buddhism.
       </p>
-
       <p>
-        The monastery’s design reflects traditional Chinese pagoda architecture, with beautiful sloping roofs, intricate carvings, and vibrant wall paintings depicting deities and symbols of protection. The aura here is calm and divine, surrounded by lush pine forests and panoramic views of the Kanchenjunga range.
+        Legend says that Lama Druptob Karpo, a famous tantric master known for his ability to fly, built this monastery after
+        flying from Maenam Hill in South Sikkim to this very spot.
       </p>
-
       <p>
-        Inside, you’ll find images of Guru Padmasambhava, Lord Buddha, and the deity Loki Sharia. During morning prayers, the air fills with the deep sound of drums and horns, creating a deeply meditative experience for visitors. The peaceful chants of monks blend perfectly with the cool mountain air.
-      </p>
-
-      <p>
-        Enchey comes alive during the annual Chaam Dance Festival, held every December or January. Monks wear colorful masks representing protective deities and perform ritual dances believed to drive away evil spirits and bless the land. The sight of fluttering prayer flags and the echoing chants make this festival truly unforgettable.
-      </p>
-
-      <p>
-        For visitors seeking quiet reflection and cultural immersion, Enchey Monastery offers a sacred retreat. It’s a place where tradition, spirituality, and the raw beauty of the Himalayas merge seamlessly, leaving an imprint of peace on everyone who visits.
+        The monastery’s design reflects traditional Chinese pagoda architecture, with beautiful sloping roofs, intricate carvings,
+        and vibrant wall paintings depicting deities and symbols of protection.
       </p>
     </div>
 
-    <!-- VR 360° Modal -->
+    <!-- VR Modal -->
     <div id="vr-modal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
       <div class="relative w-full max-w-5xl h-[80vh] bg-black rounded-xl overflow-hidden">
         <button onclick="closeVR()" class="absolute top-3 right-3 text-white bg-blue-600 px-3 py-1 rounded">Close</button>
@@ -87,28 +75,23 @@
       </div>
     </div>
 
-    <!-- Feature Buttons -->
+    <!-- Buttons -->
     <div class="flex flex-wrap justify-center gap-8 mt-10">
-      <div class="glass-panel feature-circle px-6 py-4 text-center font-semibold cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300"
-           onclick="openVR(27.3386, 88.6061)">
+      <div
+        class="glass-panel feature-circle px-6 py-4 text-center font-semibold cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300"
+        onclick="openVR(27.3386, 88.6061)">
         VR 360° VIEW
       </div>
-      <div class="glass-panel feature-circle px-6 py-4 text-center font-semibold cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300">
-        CONNECT
-      </div>
-      <div class="glass-panel feature-circle px-6 py-4 text-center font-semibold cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300">
-        GALLERY
-      </div>
+      <div class="glass-panel feature-circle px-6 py-4 text-center font-semibold">CONNECT</div>
+      <div class="glass-panel feature-circle px-6 py-4 text-center font-semibold">GALLERY</div>
     </div>
 
-    <!-- Back Button -->
     <a href="monasteries.html" class="glass-panel mt-10 px-8 py-3 text-lg font-bold text-center hover:bg-blue-500 hover:text-white transition-all duration-300">
       Back to Monasteries
     </a>
   </div>
 
-  <!-- ✅ Only one working Maps API + JS file -->
   <script src="js/enchey.js"></script>
- 
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqsgV0VjTV4Vv0NkJMts8XlUoP2-OPSNs&callback=initMap"></script>
 </body>
 </html>
