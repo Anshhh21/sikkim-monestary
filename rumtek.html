@@ -14,6 +14,17 @@
       color: white;
       font-family: 'Inter', sans-serif;
     }
+    .feature-circle {
+    background: rgba(15, 23, 42, 0.5); /* Dark glass */
+    border: 1px solid rgba(59, 130, 246, 0.4); /* Blue border */
+    color: #3b82f6; /* Tailwind blue */
+    border-radius: 1rem;
+    min-width: 140px;
+}
+.feature-circle:hover {
+    background: rgba(59, 130, 246, 0.2);
+    color: white;
+}
     .glass-panel {
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(12px);
@@ -62,6 +73,23 @@
         Visiting Rumtek is not just a visual experience—it’s a journey into calmness and introspection. Whether you are a pilgrim or a curious traveler, Rumtek Monastery reminds you of the timeless beauty of faith and culture that thrives in the heart of Sikkim’s mountains.
       </p>
     </div>
+    <!-- Feature Buttons -->
+<div class="flex flex-wrap justify-center gap-8 mt-10">
+  <div class="glass-panel feature-circle px-6 py-4 text-center font-semibold cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300">
+    VR 360° VIEW
+  </div>
+  <div class="glass-panel feature-circle px-6 py-4 text-center font-semibold cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300">
+    CONNECT
+  </div>
+  <div class="glass-panel feature-circle px-6 py-4 text-center font-semibold cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300">
+    GALLERY
+  </div>
+</div>
+
+<!-- Back Button -->
+<a href="monasteries.html" class="glass-panel mt-10 px-8 py-3 text-lg font-bold text-center hover:bg-blue-500 hover:text-white transition-all duration-300">
+  Back to Monasteries
+</a>
   </div>
 </body>
 </html>
