@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rumtek Monastery</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
   <style>
     body {
       background-image: url('https://github.com/Anshhh21/sikkim-monestary/blob/main/images/rumtek.jpg?raw=true');
@@ -15,16 +15,16 @@
       font-family: 'Inter', sans-serif;
     }
     .feature-circle {
-    background: rgba(15, 23, 42, 0.5); /* Dark glass */
-    border: 1px solid rgba(59, 130, 246, 0.4); /* Blue border */
-    color: #3b82f6; /* Tailwind blue */
-    border-radius: 1rem;
-    min-width: 140px;
-}
-.feature-circle:hover {
-    background: rgba(59, 130, 246, 0.2);
-    color: white;
-}
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      color: #3b82f6;
+      border-radius: 1rem;
+      min-width: 140px;
+    }
+    .feature-circle:hover {
+      background: rgba(59, 130, 246, 0.2);
+      color: white;
+    }
     .glass-panel {
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(12px);
@@ -35,18 +35,18 @@
     .overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.55);
+      background: rgba(0, 0, 0, 0.55);
       z-index: -1;
     }
     .highlight {
       color: #fff;
-      text-shadow: 0 0 15px rgba(255,255,255,0.9);
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
     }
   </style>
 </head>
 <body class="relative">
   <div class="overlay"></div>
-  
+
   <div class="min-h-screen flex flex-col items-center justify-center px-6 py-12 space-y-8">
     <h1 class="text-5xl md:text-6xl font-bold highlight text-center font-cinzel">
       RUMTEK MONASTERY
@@ -54,54 +54,40 @@
 
     <div class="glass-panel max-w-4xl text-lg leading-relaxed space-y-6">
       <p>
-        Rumtek Monastery, also known as the Dharma Chakra Centre, stands as one of Sikkim’s most magnificent monasteries and a spiritual haven for Buddhists across the world. Located 23 kilometers from Gangtok, the monastery is the seat of the Kagyupa sect of Tibetan Buddhism, brought to Sikkim in the 12th century. Surrounded by lush green hills, it offers a panoramic view of the Gangtok valley and provides an atmosphere of profound peace.
+        Rumtek Monastery, also known as the Dharma Chakra Centre, is one of the most significant monasteries in Sikkim. It stands
+        majestically on a hill facing Gangtok, representing the center of Kagyu Buddhism in India.
       </p>
-
       <p>
-        The structure you see today was rebuilt in the 1960s by His Holiness the 16th Karmapa after he fled Tibet. It mirrors the original monastery in Tsurphu, Tibet, in both design and architecture. Its colorful murals, golden stupas, and intricate frescoes depicting the life of Buddha and various bodhisattvas make it a masterpiece of Tibetan craftsmanship.
-      </p>
-
-      <p>
-        The monastery also houses sacred relics, ancient manuscripts, and one of the most important collections of Buddhist texts in the world. Inside the main shrine, the atmosphere is filled with the rhythmic chants of monks, the scent of butter lamps, and the mesmerizing sound of long horns during morning and evening prayers.
-      </p>
-
-      <p>
-        Every year, the monastery becomes the center of grand celebrations during the Losar Festival (Tibetan New Year) and the Kagyu Dance Festival, where monks perform sacred mask dances symbolizing the victory of good over evil. The energy, colors, and spiritual resonance of these ceremonies attract visitors from all over the world.
-      </p>
-
-      <p>
-        Visiting Rumtek is not just a visual experience—it’s a journey into calmness and introspection. Whether you are a pilgrim or a curious traveler, Rumtek Monastery reminds you of the timeless beauty of faith and culture that thrives in the heart of Sikkim’s mountains.
+        It houses rare Buddhist scriptures, art objects, and relics of the 16th Karmapa. The golden stupa and prayer wheels create
+        an aura of peace that draws both pilgrims and tourists alike.
       </p>
     </div>
-        <!-- VR 360° Modal -->
-<div id="vr-modal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
-  <div class="relative w-full max-w-5xl h-[80vh] bg-black rounded-xl overflow-hidden">
-    <button onclick="closeVR()" class="absolute top-3 right-3 text-white bg-blue-600 px-3 py-1 rounded">Close</button>
-    <div id="street-view" class="w-full h-full"></div>
-  </div>
-</div>
 
-    <!-- Feature Buttons -->
-<div class="flex flex-wrap justify-center gap-8 mt-10">
-  <!-- VR Button -->
-<div class="glass-panel feature-circle px-6 py-4 text-center font-semibold cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300"
-     onclick="openVR(27.3355, 88.6056)">
-  VR 360° VIEW
-</div>
-  <div class="glass-panel feature-circle px-6 py-4 text-center font-semibold cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300">
-    CONNECT
-  </div>
-  <div class="glass-panel feature-circle px-6 py-4 text-center font-semibold cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300">
-    GALLERY
-  </div>
-</div>
+    <!-- VR Modal -->
+    <div id="vr-modal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
+      <div class="relative w-full max-w-5xl h-[80vh] bg-black rounded-xl overflow-hidden">
+        <button onclick="closeVR()" class="absolute top-3 right-3 text-white bg-blue-600 px-3 py-1 rounded">Close</button>
+        <div id="street-view" class="w-full h-full"></div>
+      </div>
+    </div>
 
-<!-- Back Button -->
-<a href="monasteries.html" class="glass-panel mt-10 px-8 py-3 text-lg font-bold text-center hover:bg-blue-500 hover:text-white transition-all duration-300">
-  Back to Monasteries
-</a>
+    <!-- Buttons -->
+    <div class="flex flex-wrap justify-center gap-8 mt-10">
+      <div
+        class="glass-panel feature-circle px-6 py-4 text-center font-semibold cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300"
+        onclick="openVR(27.3173, 88.6166)">
+        VR 360° VIEW
+      </div>
+      <div class="glass-panel feature-circle px-6 py-4 text-center font-semibold">CONNECT</div>
+      <div class="glass-panel feature-circle px-6 py-4 text-center font-semibold">GALLERY</div>
+    </div>
+
+    <a href="monasteries.html" class="glass-panel mt-10 px-8 py-3 text-lg font-bold text-center hover:bg-blue-500 hover:text-white transition-all duration-300">
+      Back to Monasteries
+    </a>
   </div>
- <script src="<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEhwaq_pBdH16YJV9vjYUDv52p42sw7ZU"></script>"></script>
-<script src="js/rumtek.js"></script>
+
+  <script src="js/rumtek.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqsgV0VjTV4Vv0NkJMts8XlUoP2-OPSNs&callback=initMap"></script>
 </body>
 </html>
