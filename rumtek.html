@@ -1,36 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rumtek Monastery</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rumtek Monastery</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <style>
+    body {
+      background-image: url('https://github.com/Anshhh21/sikkim-monestary/blob/main/images/rumtek.jpg?raw=true');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      font-family: 'Inter', sans-serif;
+    }
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: -1;
+    }
+    .highlight {
+      color: #fff;
+      text-shadow: 0 0 15px rgba(255,255,255,0.9);
+    }
+  </style>
 </head>
-<body class="monastery-page">
+<body class="relative">
+  <div class="overlay"></div>
+  
+  <div class="min-h-screen flex flex-col items-center justify-center px-6 py-12 space-y-8">
+    <h1 class="text-5xl md:text-6xl font-bold highlight text-center font-cinzel">
+      RUMTEK MONASTERY
+    </h1>
 
-<h1 class="font-cinzel text-5xl md:text-6xl lg:text-7xl font-bold mt-6 text-center">
-    Rumtek Monastery
-</h1>
+    <div class="glass-panel max-w-4xl text-lg leading-relaxed space-y-6">
+      <p>
+        Rumtek Monastery, also known as the Dharma Chakra Centre, stands as one of Sikkim’s most magnificent monasteries and a spiritual haven for Buddhists across the world. Located 23 kilometers from Gangtok, the monastery is the seat of the Kagyupa sect of Tibetan Buddhism, brought to Sikkim in the 12th century. Surrounded by lush green hills, it offers a panoramic view of the Gangtok valley and provides an atmosphere of profound peace.
+      </p>
 
-<p class="mt-4 text-center max-w-xl text-gray-300">
-    Rumtek Monastery is one of the most important centers of Tibetan Buddhism in Sikkim. 
-    Experience its serene surroundings, prayer rituals, and cultural heritage.
-</p>
-    <div class="fixed inset-0 bg-cover bg-center z-[-1]" 
-     style="background-image: url('https://github.com/Anshhh21/sikkim-monestary/blob/main/images/rumtek.jpg?raw=true');">
-</div>
+      <p>
+        The structure you see today was rebuilt in the 1960s by His Holiness the 16th Karmapa after he fled Tibet. It mirrors the original monastery in Tsurphu, Tibet, in both design and architecture. Its colorful murals, golden stupas, and intricate frescoes depicting the life of Buddha and various bodhisattvas make it a masterpiece of Tibetan craftsmanship.
+      </p>
 
-<div class="fixed inset-0 bg-black/60 z-0"></div>
+      <p>
+        The monastery also houses sacred relics, ancient manuscripts, and one of the most important collections of Buddhist texts in the world. Inside the main shrine, the atmosphere is filled with the rhythmic chants of monks, the scent of butter lamps, and the mesmerizing sound of long horns during morning and evening prayers.
+      </p>
 
-<!-- Feature Buttons -->
-<div class="flex flex-wrap justify-center gap-8 mt-10">
-    <div class="feature-circle">VR 360° VIEW</div>
-    <div class="feature-circle">CONNECT</div>
-    <div class="feature-circle">GALLERY</div>
-</div>
+      <p>
+        Every year, the monastery becomes the center of grand celebrations during the Losar Festival (Tibetan New Year) and the Kagyu Dance Festival, where monks perform sacred mask dances symbolizing the victory of good over evil. The energy, colors, and spiritual resonance of these ceremonies attract visitors from all over the world.
+      </p>
 
-<a href="monasteries.html" class="glass-btn mt-10 px-8 py-3 text-lg font-bold">Back to Monasteries</a>
-
+      <p>
+        Visiting Rumtek is not just a visual experience—it’s a journey into calmness and introspection. Whether you are a pilgrim or a curious traveler, Rumtek Monastery reminds you of the timeless beauty of faith and culture that thrives in the heart of Sikkim’s mountains.
+      </p>
+    </div>
+  </div>
 </body>
 </html>
