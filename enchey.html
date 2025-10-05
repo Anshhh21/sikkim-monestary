@@ -14,17 +14,20 @@
       color: white;
       font-family: 'Inter', sans-serif;
     }
+
     .feature-circle {
-    background: rgba(15, 23, 42, 0.5); /* Dark glass */
-    border: 1px solid rgba(59, 130, 246, 0.4); /* Blue border */
-    color: #3b82f6; /* Tailwind blue */
-    border-radius: 1rem;
-    min-width: 140px;
-}
-.feature-circle:hover {
-    background: rgba(59, 130, 246, 0.2);
-    color: white;
-}
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      color: #3b82f6;
+      border-radius: 1rem;
+      min-width: 140px;
+    }
+
+    .feature-circle:hover {
+      background: rgba(59, 130, 246, 0.2);
+      color: white;
+    }
+
     .glass-panel {
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(12px);
@@ -32,12 +35,14 @@
       padding: 2rem;
       border-radius: 1rem;
     }
+
     .overlay {
       position: fixed;
       inset: 0;
       background: rgba(0,0,0,0.55);
       z-index: -1;
     }
+
     .highlight {
       color: #fff;
       text-shadow: 0 0 15px rgba(255,255,255,0.9);
@@ -72,37 +77,38 @@
       <p>
         For visitors seeking quiet reflection and cultural immersion, Enchey Monastery offers a sacred retreat. It’s a place where tradition, spirituality, and the raw beauty of the Himalayas merge seamlessly, leaving an imprint of peace on everyone who visits.
       </p>
-      
     </div>
-    <!-- VR 360° Modal -->
-<div id="vr-modal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
-  <div class="relative w-full max-w-5xl h-[80vh] bg-black rounded-xl overflow-hidden">
-    <button onclick="closeVR()" class="absolute top-3 right-3 text-white bg-blue-600 px-3 py-1 rounded">Close</button>
-    <div id="street-view" class="w-full h-full"></div>
-  </div>
-</div>
-    <!-- Feature Buttons -->
-<div class="flex flex-wrap justify-center gap-8 mt-10">
-  <!-- VR Button -->
-<div class="glass-panel feature-circle px-6 py-4 text-center font-semibold cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300"
-     onclick="openVR(27.3386, 88.6061)">
-  VR 360° VIEW
-</div>
-  <div class="glass-panel feature-circle px-6 py-4 text-center font-semibold cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300">
-    CONNECT
-  </div>
-  <div class="glass-panel feature-circle px-6 py-4 text-center font-semibold cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300">
-    GALLERY
-  </div>
-</div>
 
-<!-- Back Button -->
-<a href="monasteries.html" class="glass-panel mt-10 px-8 py-3 text-lg font-bold text-center hover:bg-blue-500 hover:text-white transition-all duration-300">
-  Back to Monasteries
-</a>
+    <!-- VR 360° Modal -->
+    <div id="vr-modal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
+      <div class="relative w-full max-w-5xl h-[80vh] bg-black rounded-xl overflow-hidden">
+        <button onclick="closeVR()" class="absolute top-3 right-3 text-white bg-blue-600 px-3 py-1 rounded">Close</button>
+        <div id="street-view" class="w-full h-full"></div>
+      </div>
+    </div>
+
+    <!-- Feature Buttons -->
+    <div class="flex flex-wrap justify-center gap-8 mt-10">
+      <div class="glass-panel feature-circle px-6 py-4 text-center font-semibold cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300"
+           onclick="openVR(27.3386, 88.6061)">
+        VR 360° VIEW
+      </div>
+      <div class="glass-panel feature-circle px-6 py-4 text-center font-semibold cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300">
+        CONNECT
+      </div>
+      <div class="glass-panel feature-circle px-6 py-4 text-center font-semibold cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300">
+        GALLERY
+      </div>
+    </div>
+
+    <!-- Back Button -->
+    <a href="monasteries.html" class="glass-panel mt-10 px-8 py-3 text-lg font-bold text-center hover:bg-blue-500 hover:text-white transition-all duration-300">
+      Back to Monasteries
+    </a>
   </div>
-  <script src="<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqsgV0VjTV4Vv0NkJMts8XlUoP2-OPSNs&callback=initMap"async
-  defer></script>"></script>
-<script src="js/enchey.js"></script>
+
+  <!-- ✅ Only one working Maps API + JS file -->
+  <script src="js/enchey.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqsgV0VjTV4Vv0NkJMts8XlUoP2-OPSNs&callback=initMap"></script>
 </body>
 </html>
