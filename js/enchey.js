@@ -1,35 +1,45 @@
+
+
 let panorama;
+let mapLoaded = false;
 
-function initMap() {
-  const encheyLocation = { lat: 27.3386, lng: 88.6061 }; // approx coords
+function loadGoogleMaps(callback) {
+  if (mapLoaded) {
+    callback();
+    return;
+  }
 
-  // Initialize but keep invisible until modal is opened
-  panorama = new google.maps.StreetViewPanorama(
-    document.getElementById("street-view"),
-    {
-      position: encheyLocation,
-      pov: { heading: 100, pitch: 0 },
-      zoom: 1,
-      visible: false,
-    }
-  );
+  const script = document.createElement("script");
+  script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCqsgV0VjTV4Vv0NkJMts8XlUoP2-OPSNs&callback=initMap";
+  script.async = true;
+  document.head.appendChild(script);
+
+  window.initMap = () => {
+    mapLoaded = true;
+    callback();
+  };
 }
 
-// Function to open modal and activate Street View
 function openVR(lat, lng) {
   const modal = document.getElementById("vr-modal");
   modal.classList.remove("hidden");
   modal.classList.add("flex");
 
-  if (panorama) {
-    panorama.setPosition({ lat, lng });
-    panorama.setVisible(true);
-  } else {
-    console.error("Panorama not initialized yet!");
-  }
+  loadGoogleMaps(() => {
+    const location = { lat, lng };
+
+    panorama = new google.maps.StreetViewPanorama(
+      document.getElementById("street-view"),
+      {
+        position: location,
+        pov: { heading: 100, pitch: 0 },
+        zoom: 1,
+        visible: true,
+      }
+    );
+  });
 }
 
-// Function to close modal
 function closeVR() {
   const modal = document.getElementById("vr-modal");
   modal.classList.add("hidden");
@@ -39,5 +49,3 @@ function closeVR() {
     panorama.setVisible(false);
   }
 }
-
-window.initMap = initMap; // ✅ important for Google callback
