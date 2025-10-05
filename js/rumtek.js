@@ -1,27 +1,28 @@
 let panorama;
 
-function openVR(lat = 27.3355, lng = 88.6056) {
-  document.getElementById('vr-modal').classList.remove('hidden');
-  
-  panorama = new google.maps.StreetViewPanorama(
-    document.getElementById('street-view'), {
-      position: { lat: lat, lng: lng },
-      pov: { heading: 0, pitch: 0 },
-      zoom: 1
-    }
-  );
-  
-  // Gyroscope support for mobile
-  if (window.DeviceOrientationEvent) {
-    window.addEventListener("deviceorientation", function(event) {
-      if(!panorama) return;
-      let alpha = event.alpha || 0;
-      let beta = event.beta || 0;
-      panorama.setPov({ heading: alpha, pitch: beta });
-    }, true);
-  }
+function initMap() {
+  console.log("Google Maps API loaded for Rumtek");
+}
+
+function openVR(lat, lng) {
+  const modal = document.getElementById("vr-modal");
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+
+  const streetViewDiv = document.getElementById("street-view");
+  panorama = new google.maps.StreetViewPanorama(streetViewDiv, {
+    position: { lat, lng },
+    pov: { heading: 165, pitch: 0 },
+    zoom: 1,
+    disableDefaultUI: true,
+  });
 }
 
 function closeVR() {
-  document.getElementById('vr-modal').classList.add('hidden');
+  const modal = document.getElementById("vr-modal");
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
+
+  const streetViewDiv = document.getElementById("street-view");
+  streetViewDiv.innerHTML = "";
 }
