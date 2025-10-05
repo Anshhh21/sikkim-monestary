@@ -1,27 +1,9 @@
-let map;
 let panorama;
 
 function initMap() {
-  // Enchey Monastery coordinates (approx)
-  const encheyLocation = { lat: 27.3457, lng: 88.6117 };
+  const encheyLocation = { lat: 27.3386, lng: 88.6061 }; // approx coords
 
-  // Initialize map
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: encheyLocation,
-    zoom: 14,
-    mapTypeId: "roadmap",
-    streetViewControl: false,
-    styles: [
-      { elementType: "geometry", stylers: [{ color: "#1c1c1c" }] },
-      { elementType: "labels.text.stroke", stylers: [{ color: "#1c1c1c" }] },
-      { elementType: "labels.text.fill", stylers: [{ color: "#00bfff" }] },
-      { featureType: "road", elementType: "geometry", stylers: [{ color: "#2a2a2a" }] },
-      { featureType: "water", elementType: "geometry", stylers: [{ color: "#0e1626" }] },
-      { featureType: "poi", elementType: "labels.text.fill", stylers: [{ color: "#00bfff" }] }
-    ],
-  });
-
-  // Initialize Street View
+  // Initialize but keep invisible until modal is opened
   panorama = new google.maps.StreetViewPanorama(
     document.getElementById("street-view"),
     {
@@ -31,30 +13,31 @@ function initMap() {
       visible: false,
     }
   );
-
-  // Link the panorama to the map
-  map.setStreetView(panorama);
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  const view360Btn = document.getElementById("view360Btn");
-  const modal = document.getElementById("vrModal");
-  const closeBtn = document.querySelector(".close");
+// Function to open modal and activate Street View
+function openVR(lat, lng) {
+  const modal = document.getElementById("vr-modal");
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
 
-  view360Btn.addEventListener("click", function() {
-    modal.style.display = "block";
+  if (panorama) {
+    panorama.setPosition({ lat, lng });
     panorama.setVisible(true);
-  });
+  } else {
+    console.error("Panorama not initialized yet!");
+  }
+}
 
-  closeBtn.addEventListener("click", function() {
-    modal.style.display = "none";
+// Function to close modal
+function closeVR() {
+  const modal = document.getElementById("vr-modal");
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
+
+  if (panorama) {
     panorama.setVisible(false);
-  });
+  }
+}
 
-  window.addEventListener("click", function(e) {
-    if (e.target === modal) {
-      modal.style.display = "none";
-      panorama.setVisible(false);
-    }
-  });
-});
+window.initMap = initMap; // ✅ important for Google callback
