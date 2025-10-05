@@ -35,7 +35,7 @@ function closeVR() {
 // Load Google Maps dynamically only when needed
 function loadGoogleMaps(callback) {
   const script = document.createElement("script");
-  script.src = "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap";
+  script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCqsgV0VjTV4Vv0NkJMts8XlUoP2-OPSNs&callback=initMap";
   script.async = true;
   document.head.appendChild(script);
 
